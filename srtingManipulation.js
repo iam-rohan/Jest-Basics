@@ -1,8 +1,10 @@
+//STRING CAPITALIZATION
 function capitalize(string) {
   let result = string[0].toUpperCase() + string.slice(1);
   return result;
 }
 
+//STRING REVERSAL
 function reverseString(string) {
   let reverseStringArray = [];
 
@@ -15,6 +17,7 @@ function reverseString(string) {
   return result;
 }
 
+//CEASER CIPHER
 function ceaserCipher(string, key) {
   const normalOrder = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -39,8 +42,6 @@ function ceaserCipher(string, key) {
       finalArray[i] = stringArray[i];
     }
   }
-
-  console.log("Final Output:", finalArray.join(""));
 
   return finalArray.join("");
 }

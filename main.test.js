@@ -1,5 +1,6 @@
 import { capitalize, reverseString, ceaserCipher } from "./srtingManipulation";
 import { calculator } from "./calculator";
+import { analyzeArray } from "./arrayAnalysis";
 
 test("capitalizes the given string", () => {
   let computed = capitalize("am I the one?");
@@ -28,4 +29,14 @@ test("ceaser cipher logic", () => {
   expect(ceaserCipher("xyz", 3)).toEqual("abc");
   expect(ceaserCipher("HeLLo", 3)).toEqual("KhOOr");
   expect(ceaserCipher("Hello, World!", 3)).toEqual("Khoor, Zruog!");
+});
+
+test("Array analyzer", () => {
+  let object = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(object).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
 });
