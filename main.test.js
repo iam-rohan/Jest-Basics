@@ -1,4 +1,4 @@
-import { capitalize, reverseString } from "./srtingManipulation";
+import { capitalize, reverseString, ceaserCipher } from "./srtingManipulation";
 import { calculator } from "./calculator";
 
 test("capitalizes the given string", () => {
@@ -22,4 +22,10 @@ test("calculator design", () => {
   expect(calculator.multiply(3, 2)).toEqual(expected.multiply);
   expect(calculator.add(3, 2)).toEqual(expected.add);
   expect(calculator.subtract(3, 2)).toEqual(expected.substract);
+});
+
+test("ceaser cipher logic", () => {
+  expect(ceaserCipher("xyz", 3)).toEqual("abc");
+  expect(ceaserCipher("HeLLo", 3)).toEqual("KhOOr");
+  expect(ceaserCipher("Hello, World!", 3)).toEqual("Khoor, Zruog!");
 });
